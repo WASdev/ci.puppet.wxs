@@ -19,7 +19,7 @@ eXtremeScale.server-1.1
 
 eXtremeScale.webapp-1.1
 ```
-## Installables ## 
+##Installables
 
 The installables i.e WebSphere eXtreme Scale 8.6.0.2 (trial) and  WebSphere Liberty Profile Developers Runtime have to be downloaded and placed in the `files` directory under the module(wxs). They can be downloaded from the following locations.
 
@@ -32,7 +32,7 @@ WebSphere Liberty Profile Developers Runtime -
 https://www.ibm.com/developerworks/community/blogs/wasdev/entry/download
 
 
-##Modules##
+##Modules
 
 `wxs::copy_files_xs` This module will copy the files  i.e (WebSphere eXtreme Scale and WebSphere Liberty Profile Developers Runtime) into location specified by `puppetFileRoot`
 
@@ -40,7 +40,7 @@ https://www.ibm.com/developerworks/community/blogs/wasdev/entry/download
 
 `wxs::augment_liberty` This module with augment an existing liberty profile with the WebSphere Liberty Profile Developers Runtime. This module should be used when a deployed application on the liberty server needs to connect to a standalone eXtreme Scale.
 
-## Customisations  ##
+##Customisations
 
 ** The following parameters can be used to customise the way the module behaves.**
 
@@ -76,11 +76,11 @@ https://www.ibm.com/developerworks/community/blogs/wasdev/entry/download
 [*path*]
 The path for the shell to run commands like mkdir/unzip. The default value should be enough in most cases.
 
-##Usage##
+##Usage
 
 
   To install ExtremeScale
-   ```
+   
          class { "wlp":
                    acceptLicense => true,
                }->
@@ -89,10 +89,10 @@ The path for the shell to run commands like mkdir/unzip. The default value shoul
          class { "wxs": }->
          class { "wxs::copy_files_xs":}->
          class { "wxs::install_xs": }
-   ```
+   
 
  To Augment a liberty profile with eXtreme Scale feature
-    ```
+    
     
 		   class { "wlp":
 					  acceptLicense => true
@@ -101,4 +101,21 @@ The path for the shell to run commands like mkdir/unzip. The default value shoul
 		   class { "wlp::install": } ->
 		   class { "wxs": }->
 		   class { "wxs::augment_liberty": }
-    ```
+    
+## Notice
+
+ © Copyright IBM Corporation 2013, 2014.
+
+## License
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.	
