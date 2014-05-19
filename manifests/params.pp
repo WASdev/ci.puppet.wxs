@@ -1,0 +1,15 @@
+class wxs::params {
+  $serverName         = "server1"
+  $install_root       = "/opt/IBM/"  
+  $wxs_serverdirName  = "ObjectGrid"
+  $user               = "puppetuser"
+  $baseDir            = "liberty"
+  $artifact           = "base"
+  $action             = "install"
+  $java_home          = "/usr/lib/jvm/java-1.6.0"
+  $puppetFileRoot = "/home/${user}/wxs"
+  $extremeScaleBinaryName ="extremescaletrial860.zip"
+  $extremeScaleLibertyBinaryName = "wxs-wlp_8.6.0.4.jar"
+  $extremeScaleBinary = "${puppetFileRoot}/${extremeScaleBinaryName}"
+  $path = "${java_home}/bin:/opt/puppet/bin:${install_root}/${baseDir}/wlp/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin"   
+}
